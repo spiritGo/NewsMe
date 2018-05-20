@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/lv_musicList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#999"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/iv_playAndPause"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/play_pause_selector" />
+
+        <SeekBar
+            android:id="@+id/sb_bar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/iv_playAndPause"
+            android:layout_toRightOf="@id/iv_playAndPause" />
+
+        <TextView
+            android:id="@+id/tv_musicTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/sb_bar"
+            android:layout_alignStart="@id/sb_bar"
+            android:layout_below="@id/sb_bar"
+            android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp"
+            android:text="test" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/sb_bar"
+            android:layout_toRightOf="@id/sb_bar">
+
+            <ImageView
+                android:id="@+id/iv_prev"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/prev" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@mipmap/next" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
